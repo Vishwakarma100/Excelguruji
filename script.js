@@ -1,14 +1,16 @@
-function analyze() {
-  let query = document.getElementById("query").value;
-  let responseBox = document.getElementById("responseText");
+document.getElementById("analyzeBtn").addEventListener("click", () => {
+  const fileInput = document.getElementById("fileInput");
+  const responseDiv = document.getElementById("response");
 
-  if (!query) {
-    responseBox.innerText = "⚠️ Please enter your Excel query first.";
+  if (!fileInput.files.length) {
+    responseDiv.innerText = "⚠️ Please upload a screenshot first.";
     return;
   }
 
-  // Placeholder for AI integration
-  responseBox.innerText = 
-    "✅ Thanks for your question: \"" + query + "\"\n\n" +
-    "👉 Our AI will analyze your Excel issue and guide you with steps.";
-}
+  // Demo response
+  responseDiv.innerText = "✅ Screenshot uploaded successfully.\nGuruji is analyzing your Excel query...";
+  
+  setTimeout(() => {
+    responseDiv.innerText = "📊 Guruji's Response:\n\nLagta hai tumhe SUMIF formula lagana chahiye. Example:\n=SUMIF(A:A, \"Invoice 1\", L:L)";
+  }, 2000);
+});
