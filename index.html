@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Excelguruji - AI Excel Help</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>📊 Excelguruji</h1>
+    <p>Upload your Excel screenshot and get instant AI-powered help!</p>
+
+    <form id="uploadForm">
+      <label for="query">Your Question:</label>
+      <textarea id="query" placeholder="Describe your Excel issue here..."></textarea>
+
+      <label for="fileUpload">Upload Screenshot:</label>
+      <input type="file" id="fileUpload" accept="image/*"/>
+
+      <button type="button" onclick="analyze()">Analyze with AI</button>
+    </form>
+
+    <div id="responseBox">
+      <h2>AI Response:</h2>
+      <p id="responseText">Upload a screenshot and ask your question to get help.</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
